@@ -1,6 +1,7 @@
 import { CHAPTERS, CARDS } from "./data.js";
 import { figure } from "./figures.js";
 import { renderTimer } from "./timer.js";
+import { render as renderInstall } from "./install.js";
 
 const app = document.getElementById("app");
 const titleEl = document.getElementById("title");
@@ -16,7 +17,8 @@ function renderHome() {
     <a class="timer-link" href="#/timer">
       <span class="timer-icon">⏱</span>
       <span><strong>라운드 타이머</strong><small>종소리 · 콤비 콜아웃 · 8주 프로그램</small></span>
-    </a>` + CHAPTERS.map((ch) => {
+    </a>
+    <div id="install-slot"></div>` + CHAPTERS.map((ch) => {
     const cards = CARDS.filter((c) => c.chapter === ch.id);
     const list = cards.length
       ? cards.map((c) => `
@@ -31,6 +33,7 @@ function renderHome() {
         ${list}
       </section>`;
   }).join("");
+  renderInstall();
 }
 
 function renderCard(id) {

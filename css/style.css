@@ -238,3 +238,25 @@ main { max-width: 640px; margin: 0 auto; padding: 16px 16px 48px; }
 .stepper button { width: 40px; height: 38px; padding: 0; font-size: 20px; }
 .stepper b { min-width: 52px; text-align: center; font-variant-numeric: tabular-nums; }
 .seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+
+/* 홈 화면 설치 안내 */
+.install {
+  background: var(--surface); border: 1px solid var(--brand); border-radius: var(--radius);
+  padding: 12px 12px 12px 14px; margin: 0 0 8px;
+}
+.install-row { display: flex; align-items: center; gap: 10px; }
+.install-icon { font-size: 24px; line-height: 1; }
+.install-text { flex: 1; min-width: 0; }
+.install-text strong { display: block; font-size: 16px; }
+.install-text small { display: block; font-size: 13px; color: var(--muted); }
+.install-btn {
+  font: inherit; font-size: 15px; font-weight: 700; flex: none; cursor: pointer;
+  background: var(--brand); color: #fff; border: 0; border-radius: 10px; padding: 9px 14px;
+}
+@media (prefers-color-scheme: dark) { .install-btn { background: var(--ph-round); } }
+.install-close {
+  font: inherit; font-size: 22px; line-height: 1; flex: none; cursor: pointer;
+  background: none; border: 0; color: var(--muted); padding: 4px 2px;
+}
+.install-guide { margin: 10px 0 0; padding-left: 22px; font-size: 15px; }
+.install-guide li + li { margin-top: 4px; }

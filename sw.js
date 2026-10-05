@@ -1,6 +1,6 @@
 // 오프라인 지원: 네트워크 우선, 실패하면 캐시 사용.
 // 네트워크 우선이라 수정한 파일이 바로 반영되고, 한 번 열어 둔 내용은 인터넷 없이도 보인다.
-const CACHE = "boxing-skillbook-v1";
+const CACHE = "boxing-skillbook-v2";
 const SHELL = [
   "./",
   "./index.html",
@@ -14,6 +14,7 @@ const SHELL = [
   "./js/data.js",
   "./js/figures.js",
   "./js/timer.js",
+  "./js/install.js",
 ];
 
 self.addEventListener("install", (e) => {
